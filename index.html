@@ -15,6 +15,7 @@
       <nav class="topnav" aria-label="主要导航">
         <a href="#chapters">课程</a>
         <a href="#prompts">提示词</a>
+        <a href="#cases">案例</a>
         <a href="#practice">练习</a>
       </nav>
     </header>
@@ -203,6 +204,129 @@
           <article>
             <h3>代码审查</h3>
             <pre><code>请像资深工程师一样 review 当前改动，重点关注 bug、边界情况、行为回归和测试缺口。</code></pre>
+          </article>
+        </div>
+      </section>
+
+      <section id="cases" class="cases">
+        <div class="section-heading">
+          <p class="eyebrow">Cases</p>
+          <h2>案例学习题</h2>
+          <p>
+            每个案例都按真实协作流程设计：先描述场景，再练习如何向 Codex 提需求、拆任务、验证结果。
+          </p>
+        </div>
+
+        <div class="project-showcase">
+          <article class="project-card">
+            <span>案例项目 01</span>
+            <h3>个人主页</h3>
+            <p>练习读页面结构、修改文案、增加内容区块和调整样式。</p>
+            <a href="case-projects/personal-homepage/index.html">打开项目</a>
+          </article>
+          <article class="project-card">
+            <span>案例项目 02</span>
+            <h3>Todo Lite</h3>
+            <p>练习阅读 JavaScript 交互、修复空输入问题和增加统计功能。</p>
+            <a href="case-projects/todo-lite/index.html">打开项目</a>
+          </article>
+          <article class="project-card">
+            <span>案例项目 03</span>
+            <h3>费用计算器</h3>
+            <p>练习定位计算 bug、处理边界情况和增加友好错误提示。</p>
+            <a href="case-projects/expense-calculator/index.html">打开项目</a>
+          </article>
+        </div>
+
+        <div class="case-grid">
+          <article class="case-card">
+            <div class="case-meta">
+              <span>入门</span>
+              <strong>读懂一个陌生项目</strong>
+            </div>
+            <p>你刚拿到一个别人写的小项目，不知道怎么启动，也不知道核心代码在哪里。</p>
+            <h3>练习任务</h3>
+            <ol>
+              <li>让 Codex 总结项目结构。</li>
+              <li>让 Codex 找出启动方式和配置文件。</li>
+              <li>让 Codex 推荐最值得先读的 3 个文件。</li>
+            </ol>
+            <pre><code>请先阅读这个项目，帮我建立项目地图：主要目录、启动方式、核心文件和建议阅读顺序。先不要修改文件。</code></pre>
+          </article>
+
+          <article class="case-card">
+            <div class="case-meta">
+              <span>入门</span>
+              <strong>修改一个页面文案</strong>
+            </div>
+            <p>页面上有一句文案不准确，你想让 Codex 找到位置并修改，但不希望它改动其他地方。</p>
+            <h3>练习任务</h3>
+            <ol>
+              <li>描述旧文案和新文案。</li>
+              <li>要求 Codex 先定位文件。</li>
+              <li>修改后检查页面是否还能正常打开。</li>
+            </ol>
+            <pre><code>请找到页面里“旧文案”的位置，把它改成“新文案”。只做这个修改，完成后说明改了哪个文件。</code></pre>
+          </article>
+
+          <article class="case-card">
+            <div class="case-meta">
+              <span>进阶</span>
+              <strong>修复一个可复现 bug</strong>
+            </div>
+            <p>点击按钮后页面没有反应。你知道复现步骤，但不知道问题在样式、前端逻辑还是数据处理。</p>
+            <h3>练习任务</h3>
+            <ol>
+              <li>写清楚复现步骤、期望结果和实际结果。</li>
+              <li>让 Codex 先分析可能原因。</li>
+              <li>确认后再修复并验证。</li>
+            </ol>
+            <pre><code>复现步骤是……期望结果是……实际结果是……请先定位最可能的问题位置，并说明判断依据。先不要修改。</code></pre>
+          </article>
+
+          <article class="case-card">
+            <div class="case-meta">
+              <span>进阶</span>
+              <strong>给功能补测试</strong>
+            </div>
+            <p>你刚完成一个小功能，但不确定应该测什么。这个案例练习让 Codex 帮你从风险出发补测试。</p>
+            <h3>练习任务</h3>
+            <ol>
+              <li>让 Codex 先总结改动影响范围。</li>
+              <li>列出正常情况和边界情况。</li>
+              <li>实现必要测试并运行。</li>
+            </ol>
+            <pre><code>请根据这次改动分析应该补哪些测试，优先覆盖容易出错的边界情况。确认测试点后再实现。</code></pre>
+          </article>
+
+          <article class="case-card">
+            <div class="case-meta">
+              <span>实战</span>
+              <strong>做一次代码审查</strong>
+            </div>
+            <p>你完成了一组改动，准备提交前想让 Codex 帮你找风险，而不是只夸改动完成了。</p>
+            <h3>练习任务</h3>
+            <ol>
+              <li>让 Codex 审查当前改动。</li>
+              <li>要求按严重程度排序。</li>
+              <li>只修复你确认的问题。</li>
+            </ol>
+            <pre><code>请像资深工程师一样 review 当前改动，优先指出 bug、行为回归、边界情况和测试缺口。总结放在最后。</code></pre>
+          </article>
+
+          <article class="case-card">
+            <div class="case-meta">
+              <span>实战</span>
+              <strong>把重复任务变成流程</strong>
+            </div>
+            <p>你每次发布前都要做一串检查，经常漏步骤。这个案例练习把重复操作沉淀成清单或脚本。</p>
+            <h3>练习任务</h3>
+            <ol>
+              <li>先列出你手动做过的步骤。</li>
+              <li>让 Codex 整理成检查清单。</li>
+              <li>再判断哪些步骤适合自动化。</li>
+            </ol>
+            <pre><code>请把下面这个重复任务整理成可复用流程，先输出检查清单，再建议哪些环节适合自动化。</code></pre>
           </article>
         </div>
       </section>

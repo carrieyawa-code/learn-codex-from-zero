@@ -216,6 +216,7 @@ h3 {
 .intro,
 .chapters,
 .prompts,
+.cases,
 .practice {
   padding: clamp(54px, 7vw, 90px) clamp(20px, 5vw, 72px);
 }
@@ -234,6 +235,8 @@ h3 {
 
 .role-grid,
 .prompt-grid,
+.project-showcase,
+.case-grid,
 .week-grid {
   display: grid;
   gap: 16px;
@@ -245,6 +248,8 @@ h3 {
 
 .role-grid article,
 .prompt-grid article,
+.project-card,
+.case-card,
 .week-grid article {
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -329,6 +334,97 @@ ol {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.cases {
+  background: #fff;
+}
+
+.section-heading p {
+  color: var(--muted);
+  font-size: 18px;
+}
+
+.project-showcase {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-bottom: 22px;
+}
+
+.project-card {
+  padding: 24px;
+  background: #f8fbfa;
+}
+
+.project-card span {
+  color: var(--accent-2);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.project-card h3 {
+  margin: 10px 0;
+}
+
+.project-card p {
+  color: var(--muted);
+}
+
+.project-card a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  margin-top: 8px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  color: #fff;
+  background: var(--accent);
+  font-weight: 800;
+}
+
+.case-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.case-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 22px;
+}
+
+.case-card p {
+  color: var(--muted);
+}
+
+.case-card h3 {
+  margin-bottom: -4px;
+  font-size: 17px;
+}
+
+.case-card pre {
+  margin-top: auto;
+}
+
+.case-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.case-meta span {
+  width: fit-content;
+  padding: 4px 9px;
+  border-radius: 999px;
+  color: var(--accent);
+  background: var(--soft);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.case-meta strong {
+  font-size: 22px;
+  line-height: 1.25;
+}
+
 .prompt-grid article {
   padding: 22px;
 }
@@ -398,7 +494,9 @@ footer p {
   }
 
   .role-grid,
-  .prompt-grid {
+  .prompt-grid,
+  .project-showcase,
+  .case-grid {
     grid-template-columns: 1fr;
   }
 }
